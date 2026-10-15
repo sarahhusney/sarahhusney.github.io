@@ -3,10 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sarah Husney | Video, communications, and design</title>
-<meta name="description" content="Portfolio of Sarah Husney, a bilingual communications specialist and video editor: web design, motion graphics, email marketing, social media, video, and photography.">
+<title>Case study: Social media for FSU College of Nursing | Sarah Husney</title>
+<meta name="description" content="How I managed FSU College of Nursing's social channels: 131 posts in 60 days and a 17.6% rise in Instagram engagement rate.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.glance .metric .num{font-size:40px}
+.board{margin-top:32px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.board-row{display:grid;grid-template-columns:56px 1.6fr 1fr 1fr 1.6fr;gap:16px;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.board-row:last-child{border-bottom:0}
+.board-row.head{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:14px 22px}
+.rank{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--purple-soft);color:var(--purple)}
+.board-row:nth-child(2) .rank{background:var(--purple);color:#fff}
+.post-name{font-weight:600}
+.platform{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--muted)}
+.platform i{font-size:18px}
+.eng{font-size:22px;font-weight:700;color:var(--purple)}
+.hl{font-size:14px;color:var(--muted)}
+.feature-post{display:grid;grid-template-columns:minmax(0,540px) 1fr;gap:40px;align-items:start;margin-top:40px}
+.embed-wrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;overflow:hidden}
+.embed-wrap iframe{display:block;width:100%;max-width:500px;margin:0 auto;border:0;border-radius:10px;background:#fff}
+.embed-wrap .instagram-media{margin:0 auto !important}
+.embed-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:14px;color:var(--muted)}
+.embed-link:hover{color:var(--purple)}
+.post-stats h3{font-size:24px;line-height:1.25;margin-top:10px}
+.post-stats .why{color:var(--muted);font-size:15px;margin-top:10px}
+.stat-list{margin-top:22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:6px 20px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.stat-row:last-child{border-bottom:0}
+.stat-row span:last-child{font-weight:700}
+.stat-row.total span:last-child{color:var(--purple);font-size:20px}
+.campaign{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px}
+.campaign .card h3{font-size:19px;margin-top:12px}
+.campaign .card p{color:var(--muted);font-size:15px;margin-top:6px}
+.campaign .nums{display:flex;gap:32px;margin-top:18px}
+.campaign .nums .n{font-size:28px;font-weight:700;color:var(--purple);line-height:1}
+.campaign .nums .l{font-size:13px;color:var(--muted);margin-top:6px}
+@media (max-width:860px){
+  .feature-post,.campaign{grid-template-columns:1fr}
+  .board-row{grid-template-columns:44px 1fr auto;row-gap:6px}
+  .board-row .platform,.board-row .hl{grid-column:2 / 4}
+  .board-row.head{display:none}
+}
+</style>
 </head>
 <body>
 
@@ -14,199 +53,155 @@
   <g fill="none" stroke="#915eff" stroke-opacity="0.12" stroke-width="1">
     <path d="M1050 0 C1500 260 860 520 1440 840"/><path d="M1080 0 C1530 270 890 540 1440 860"/>
     <path d="M1110 0 C1560 280 920 560 1440 880"/><path d="M1140 0 C1590 290 950 580 1440 900"/>
-    <path d="M1170 0 C1620 300 980 600 1440 920"/>
     <path d="M0 600 C260 500 120 820 480 900"/><path d="M0 630 C280 530 150 840 520 900"/>
   </g>
 </svg>
 
 <nav class="nav">
   <div class="container">
-    <a class="logo" href="index.html"><span class="logo-mark">SH</span>Sarah Husney</a>
+    <a class="logo" href="../index.html"><span class="logo-mark">SH</span>Sarah Husney</a>
     <div class="nav-links">
-      <a href="#about" class="hide-sm">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-      <a class="btn primary sm" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="../index.html#about" class="hide-sm">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="btn primary sm" href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </div>
 </nav>
 
-<main>
-  <div class="container">
-    <section class="hero">
-      <div class="reveal">
-        <p class="eyebrow">Communications · Video · Design</p>
-        <h1>Hi, I'm<br><span>Sarah Husney</span></h1>
-        <p class="tagline">I turn complex ideas into clear stories through video, writing, and design, in English and Spanish.</p>
-        <div class="hero-btns">
-          <a class="btn primary" href="#work">See my work <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>Connect</a>
-        </div>
-        <div class="stats">
-          <div class="stat"><p class="num">4<span>+</span></p><p class="lbl">Years in media and communications</p></div>
-          <div class="stat"><p class="num">10<span>–12</span></p><p class="lbl">Episodes edited every month</p></div>
-          <div class="stat"><p class="num">175</p><p class="lbl">Page university website managed</p></div>
-        </div>
-      </div>
-      <div class="portrait reveal">
-        <div class="portrait-img">SH<img src="assets/images/headshot.jpg" alt="Sarah Husney" onerror="this.remove()"></div>
-        <div class="float-badge b2"><i class="ti ti-language" aria-hidden="true"></i>Bilingual EN · ES</div>
-        <div class="float-badge b1"><i class="ti ti-circle-check" aria-hidden="true"></i>Open to remote roles</div>
-      </div>
-    </section>
-  </div>
+<main class="container">
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Web design</span><span>Motion graphics</span><span>Email marketing</span><span>Video editing</span><span>Social media</span><span>Photography</span>
-      <span>Web design</span><span>Motion graphics</span><span>Email marketing</span><span>Video editing</span><span>Social media</span><span>Photography</span>
+  <header class="cs-hero">
+    <a class="back-link" href="../index.html#work"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back to work</a>
+    <p class="eyebrow">Case study · Social media management</p>
+    <h1>131 posts in 60 days, and <span>a more engaged audience.</span></h1>
+    <p class="lead">Managing FSU College of Nursing's social channels from August through September 2026: celebrating graduates, showing real student life, and driving program deadlines.</p>
+    <div class="tags">
+      <span class="tag">Social media strategy</span><span class="tag">Content calendar</span><span class="tag">Instagram</span>
+      <span class="tag">Facebook</span><span class="tag">Analytics</span><span class="tag">Higher education</span>
     </div>
+  </header>
+
+  <div class="meta-grid">
+    <div class="card"><p class="label">My role</p><p>Social media management for the College</p></div>
+    <div class="card"><p class="label">Tools</p><p>Sprout Social</p></div>
+    <div class="card"><p class="label">Platforms</p><p>Instagram and Facebook</p></div>
+    <div class="card"><p class="label">Timeframe</p><p>Aug – Sep 2026</p></div>
   </div>
 
-  <div class="container">
-
-    <section>
-      <div class="feature">
-        <div class="video-wrap reveal">
-          <iframe src="https://www.youtube-nocookie.com/embed/L6VMfdtmbag" title="Boundary Breakers podcast episode edited by Sarah Husney" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="reveal">
-          <p class="eyebrow">Featured edit</p>
-          <h2 class="section-title">Boundary Breakers podcast<span class="dot">.</span></h2>
-          <ul class="check-list">
-            <li><i class="ti ti-circle-check" aria-hidden="true"></i>Multi-camera video podcast editing</li>
-            <li><i class="ti ti-circle-check" aria-hidden="true"></i>Audio-driven storytelling</li>
-            <li><i class="ti ti-circle-check" aria-hidden="true"></i>Cuts built for social distribution</li>
-          </ul>
-          <a class="btn ghost" href="https://www.youtube.com/@BoundaryBreakersHostedbyPWD/videos" target="_blank" rel="noopener">Watch more episodes <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" style="padding-top:0">
-      <div class="section-head reveal">
-        <p class="eyebrow">Selected work</p>
-        <h2 class="section-title">Recent projects<span class="dot">.</span></h2>
-      </div>
-      <div class="work-grid">
-
-        <a class="work-card reveal" href="projects/website-redesign.html">
-          <div class="thumb" style="background-image:url('assets/images/website/homepage-after.png');background-position:top center"></div>
-          <div class="info">
-            <span class="pill">Case study · Web design</span>
-            <h3>Rebuilding a 175-page college website</h3>
-            <p>A full Drupal redesign of FSU College of Nursing's site, built around the people who use it. Launching 2027.</p>
-            <span class="more">Read the case study <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="projects/motion-graphics.html">
-          <div class="thumb" data-yt="wOeGqlEawlM"></div>
-          <div class="info">
-            <span class="pill">Motion graphics</span>
-            <h3>Infographics, intros, and animated maps</h3>
-            <p>Eight motion pieces that turn legislation, data, and stories into clear visuals for statewide broadcast and digital.</p>
-            <span class="more">View the collection <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="projects/ai-microcredential-case-study.html">
-          <div class="thumb" style="background-image:url('assets/images/student-patient.jpg')"></div>
-          <div class="info">
-            <span class="pill">Case study · Email marketing</span>
-            <h3>Turning free learners into paying students</h3>
-            <p>An automated four-email Mailchimp journey for FSU College of Nursing's Responsible AI microcredential.</p>
-            <span class="more">Read the case study <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="https://www.youtube.com/watch?v=XJg93gWklEY" target="_blank" rel="noopener">
-          <div class="thumb" data-yt="XJg93gWklEY"></div>
-          <div class="info">
-            <span class="pill">Video editing</span>
-            <h3>AnitaB.org interview series</h3>
-            <p>Two seasons of interviews for the women-in-tech nonprofit behind the Grace Hopper Celebration.</p>
-            <span class="more">Watch on YouTube <i class="ti ti-arrow-up-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="projects/social-media.html">
-          <div class="thumb" style="background-image:url('assets/images/social-thumb.jpg')"></div>
-          <div class="info">
-            <span class="pill">Case study · Social media</span>
-            <h3>131 posts in 60 days</h3>
-            <p>Managing FSU College of Nursing's Instagram and Facebook, with Instagram engagement rate up 17.6% year over year.</p>
-            <span class="more">See the results <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-        <a class="work-card reveal" href="projects/photography.html">
-          <div class="thumb" style="background-image:url('assets/images/photography/photo-01.jpg')"></div>
-          <div class="info">
-            <span class="pill">Photography</span>
-            <h3>Through my lens</h3>
-            <p>A selection of my photography and film stills.</p>
-            <span class="more">View the gallery <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <section id="about" style="padding-top:0">
-      <div class="section-head reveal">
-        <p class="eyebrow">What I do</p>
-        <h2 class="section-title">My specialties<span class="dot">.</span></h2>
-        <p class="lead">I've explained Florida legislation on statewide TV, directed live newscasts, and now lead web, email, and social content for FSU College of Nursing.</p>
-      </div>
-      <div class="spec-grid">
-        <div class="spec reveal"><div class="icon-tile"><i class="ti ti-movie" aria-hidden="true"></i></div><h3>Video and motion</h3><p>Podcasts, interviews, documentary, and animated infographics.</p></div>
-        <div class="spec reveal"><div class="icon-tile"><i class="ti ti-world" aria-hidden="true"></i></div><h3>Web design</h3><p>Drupal builds, navigation, and ADA-compliant layouts.</p></div>
-        <div class="spec reveal"><div class="icon-tile"><i class="ti ti-mail-forward" aria-hidden="true"></i></div><h3>Email marketing</h3><p>Automated journeys, newsletters, copy, and design.</p></div>
-        <div class="spec reveal"><div class="icon-tile"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div><h3>Social media</h3><p>Content calendars, campaigns, and analytics.</p></div>
-      </div>
-    </section>
-
-    <section style="padding-top:0">
-      <div class="section-head reveal">
-        <p class="eyebrow">Background</p>
-        <h2 class="section-title">Experience and education<span class="dot">.</span></h2>
-      </div>
-      <div class="exp-grid">
-        <div class="exp-col reveal">
-          <h3><i class="ti ti-briefcase" aria-hidden="true"></i>Experience</h3>
-          <div class="timeline">
-            <div class="t-item"><p class="t-date">2026 – Present</p><h4>Digital Communications Specialist</h4><p>FSU College of Nursing</p></div>
-            <div class="t-item"><p class="t-date">2023 – Present</p><h4>Lead Video Editor</h4><p>Hello Studios (remote)</p></div>
-            <div class="t-item"><p class="t-date">2022 – 2025</p><h4>Lead Graphic Designer</h4><p>WFSU: The Florida Channel</p></div>
-            <div class="t-item"><p class="t-date">2022</p><h4>Technical Media Producer</h4><p>WCTV (CBS)</p></div>
-          </div>
-        </div>
-        <div class="exp-col reveal">
-          <h3><i class="ti ti-school" aria-hidden="true"></i>Education</h3>
-          <div class="timeline">
-            <div class="t-item"><p class="t-date">2022</p><h4>B.S. Telecommunications</h4><p>University of Florida · Summa Cum Laude</p></div>
-            <div class="t-item"><p class="t-date">2019</p><h4>Associate of Arts</h4><p>Broward College · Highest Honors</p></div>
-            <div class="t-item"><p class="t-date">Languages</p><h4>English and Spanish</h4><p>Native in both</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="padding-top:0">
-      <div class="cta-band reveal">
-        <div>
-          <h2>Let's make something clear and compelling.</h2>
-          <p>Open to communications, content, and video roles, remote or in Florida.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn light" href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>Connect on LinkedIn</a>
-          <a class="btn outline" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
-      </div>
-    </section>
-
+  <div class="results glance">
+    <div class="metric"><p class="num">131</p><p class="lbl">Posts published in 60 days</p></div>
+    <div class="metric"><p class="num">422K</p><p class="lbl">Organic Instagram views</p></div>
+    <div class="metric"><p class="num">+17.6%</p><p class="lbl">Instagram engagement rate, year over year</p></div>
+    <div class="metric"><p class="num">4,778</p><p class="lbl">Engagements on the top post</p></div>
   </div>
+
+  <section>
+    <p class="eyebrow">The approach</p>
+    <h2 class="section-title">Three kinds of stories<span class="dot">.</span></h2>
+    <div class="two-col" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card strategy"><div class="icon">01</div><h3>Celebrate milestones</h3><p>Graduations and achievements give the College's community, from families to alumni, something to cheer for and share.</p></div>
+      <div class="card strategy"><div class="icon">02</div><h3>Show real student life</h3><p>Behind-the-scenes moments in simulation labs and classrooms show prospective students what nursing school actually looks like.</p></div>
+      <div class="card strategy"><div class="icon">03</div><h3>Drive deadlines</h3><p>Countdown campaigns turn program deadlines into timely, faculty-led content that prompts action.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <p class="eyebrow">Top posts</p>
+    <h2 class="section-title">What performed best<span class="dot">.</span></h2>
+    <div class="board">
+      <div class="board-row head"><span>#</span><span>Post</span><span>Platform</span><span>Engagements</span><span>Highlights</span></div>
+      <div class="board-row"><span class="rank">1</span><span class="post-name">BSN graduates celebration</span><span class="platform"><i class="ti ti-brand-facebook" aria-hidden="true"></i>Facebook</span><span class="eng">4,778</span><span class="hl">509 reactions · 26 comments · 4,197 clicks</span></div>
+      <div class="board-row"><span class="rank">2</span><span class="post-name">FSU Health launch</span><span class="platform"><i class="ti ti-brand-facebook" aria-hidden="true"></i>Facebook</span><span class="eng">1,489</span><span class="hl">232 reactions · 14 shares · 47 link clicks</span></div>
+      <div class="board-row"><span class="rank">3</span><span class="post-name">DNP graduates celebration</span><span class="platform"><i class="ti ti-brand-facebook" aria-hidden="true"></i>Facebook</span><span class="eng">603</span><span class="hl">111 reactions · 24 link clicks · 462 clicks</span></div>
+      <div class="board-row"><span class="rank">4</span><span class="post-name">CPR mannequin carousel</span><span class="platform"><i class="ti ti-brand-instagram" aria-hidden="true"></i>Instagram</span><span class="eng">418</span><span class="hl">380 likes · 26 shares · 6 saves</span></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <p class="eyebrow">Featured posts</p>
+    <h2 class="section-title">A closer look<span class="dot">.</span></h2>
+
+    <div class="feature-post">
+      <div>
+        <div class="embed-wrap">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Db6iCP2m4z_/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:10px;margin:0;max-width:540px;min-width:280px;width:100%;">
+            <a href="https://www.instagram.com/p/Db6iCP2m4z_/" target="_blank" rel="noopener">View this post on Instagram</a>
+          </blockquote>
+        </div>
+        <a class="embed-link" href="https://www.instagram.com/p/Db6iCP2m4z_/" target="_blank" rel="noopener"><i class="ti ti-brand-instagram" aria-hidden="true"></i>View on Instagram</a>
+      </div>
+      <div class="post-stats">
+        <span class="pill">Instagram · Aug 11, 2026</span>
+        <h3>"Nursing education doesn't start in a classroom."</h3>
+        <p class="why">A behind-the-scenes carousel from the simulation lab. It earned the most shares of any top post, a sign that people wanted to pass it along to friends considering nursing.</p>
+        <div class="stat-list">
+          <div class="stat-row total"><span>Engagements</span><span>418</span></div>
+          <div class="stat-row"><span>Likes</span><span>380</span></div>
+          <div class="stat-row"><span>Shares</span><span>26</span></div>
+          <div class="stat-row"><span>Comments</span><span>6</span></div>
+          <div class="stat-row"><span>Saves</span><span>6</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-post">
+      <div>
+        <div class="embed-wrap">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffsucollegeofnursing%2Fposts%2Fpfbid02dTBFXAgzAGknFdy24LdGPdKsWTAvm7z6AYsP9TcqGwaSpexAeZAGUoPoZyfavRyWl&show_text=true&width=500" height="754" scrolling="no" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="DNP graduates celebration post on Facebook" loading="lazy"></iframe>
+        </div>
+        <a class="embed-link" href="https://www.facebook.com/fsucollegeofnursing/posts/pfbid02dTBFXAgzAGknFdy24LdGPdKsWTAvm7z6AYsP9TcqGwaSpexAeZAGUoPoZyfavRyWl" target="_blank" rel="noopener"><i class="ti ti-brand-facebook" aria-hidden="true"></i>View on Facebook</a>
+      </div>
+      <div class="post-stats">
+        <span class="pill">Facebook · Aug 6, 2026</span>
+        <h3>"Congratulations to our newest Doctor of Nursing Practice graduates!"</h3>
+        <p class="why">A commencement celebration that drew families, faculty, and alumni into the moment, with hundreds clicking in to see the photos.</p>
+        <div class="stat-list">
+          <div class="stat-row total"><span>Engagements</span><span>603</span></div>
+          <div class="stat-row"><span>Post clicks</span><span>462</span></div>
+          <div class="stat-row"><span>Reactions</span><span>111</span></div>
+          <div class="stat-row"><span>Link clicks</span><span>24</span></div>
+          <div class="stat-row"><span>Comments</span><span>5</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <p class="eyebrow">Campaign spotlight</p>
+    <h2 class="section-title">The MSN application deadline<span class="dot">.</span></h2>
+    <p class="lead">A countdown to the Spring 2027 online MSN deadline, featuring the faculty who lead each specialty track: AI Applications in Healthcare and Nursing Education.</p>
+    <div class="campaign">
+      <div class="card">
+        <span class="pill">Instagram · Carousel</span>
+        <h3>"ONE DAY LEFT" countdown</h3>
+        <p>A bold countdown graphic paired with faculty lead profiles for each track.</p>
+        <div class="nums"><div><p class="n">6,245</p><p class="l">Views</p></div><div><p class="n">65</p><p class="l">Engagements</p></div></div>
+      </div>
+      <div class="card">
+        <span class="pill">Instagram · Single image</span>
+        <h3>"Our deadline is tomorrow!"</h3>
+        <p>A program highlight comparing both MSN tracks, built for quick reading.</p>
+        <div class="nums"><div><p class="n">1,947</p><p class="l">Views</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <p class="eyebrow">What the data showed</p>
+    <h2 class="section-title">Lessons I'm building on<span class="dot">.</span></h2>
+    <div class="two-col">
+      <div class="card strategy"><div class="icon">01</div><h3>Milestones win</h3><p>Graduation celebrations drove 2 of the top 3 posts. Families and alumni engage, click, and come back for these moments.</p></div>
+      <div class="card strategy"><div class="icon">02</div><h3>Real moments get shared</h3><p>The simulation lab carousel earned more shares than any other top post. Authentic, behind-the-scenes content travels further than polished promotion.</p></div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding-top:0">
+    <h2 class="section-title">Want to see more<span class="dot">?</span></h2>
+    <a class="btn primary" href="../index.html#work">View all work</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </section>
+
 </main>
 
 <footer class="site">
@@ -214,25 +209,10 @@
     <p>© 2026 Sarah Husney</p>
     <div class="socials">
       <a href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
-      <a href="https://www.youtube.com/@BoundaryBreakersHostedbyPWD/videos" target="_blank" rel="noopener" aria-label="YouTube"><i class="ti ti-brand-youtube" aria-hidden="true"></i></a>
     </div>
   </div>
 </footer>
 
-<script>
-function ytThumb(el, id){
-  const fallback = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-  const img = new Image();
-  img.onload = () => { el.style.backgroundImage = `url('${img.naturalWidth > 120 ? img.src : fallback}')`; };
-  img.onerror = () => { el.style.backgroundImage = `url('${fallback}')`; };
-  img.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-}
-document.querySelectorAll('[data-yt]').forEach(el => ytThumb(el, el.dataset.yt));
-
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
