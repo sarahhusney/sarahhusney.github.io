@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography | Sarah Husney</title>
+<meta name="description" content="Photography and film stills by Sarah Husney.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.gallery{columns:3 280px;column-gap:18px;margin-top:48px}
+.gallery button{display:block;width:100%;margin:0 0 18px;padding:0;border:0;background:var(--panel);cursor:zoom-in;border-radius:14px;overflow:hidden;break-inside:avoid}
+.gallery img{width:100%;height:auto;display:block;transition:transform .5s ease}
+.gallery button:hover img{transform:scale(1.04)}
+.empty{color:var(--muted)}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,3,18,.95);display:none;align-items:center;justify-content:center;padding:72px 88px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel);color:#fff;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{border-color:var(--purple)}
+.lb-close{top:20px;right:24px}
+.lb-prev{left:20px;top:50%;transform:translateY(-50%)}
+.lb-next{right:20px;top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:640px){.lightbox{padding:72px 12px 90px}.lb-prev,.lb-next{top:auto;bottom:16px;transform:none}.lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}.lb-count{bottom:auto;top:32px}}
+</style>
+</head>
+<body>
+
+<svg class="bg-waves" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke="#915eff" stroke-opacity="0.12" stroke-width="1">
+    <path d="M1050 0 C1500 260 860 520 1440 840"/><path d="M1080 0 C1530 270 890 540 1440 860"/>
+    <path d="M1110 0 C1560 280 920 560 1440 880"/><path d="M1140 0 C1590 290 950 580 1440 900"/>
+    <path d="M0 600 C260 500 120 820 480 900"/><path d="M0 630 C280 530 150 840 520 900"/>
+  </g>
+</svg>
+
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="../index.html"><span class="logo-mark">SH</span>Sarah Husney</a>
+    <div class="nav-links">
+      <a href="../index.html#about" class="hide-sm">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="btn primary sm" href="../assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <header class="cs-hero">
+    <a class="back-link" href="../index.html#work"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back to work</a>
+    <p class="eyebrow">Photography</p>
+    <h1>Through my <span>lens.</span></h1>
+    <p class="lead">A selection of my photography and film stills.</p>
+  </header>
+
+  <section style="padding-top:0">
+    <div class="gallery" id="gallery"><p class="empty">Loading photos…</p></div>
+  </section>
+
+  <section class="cta" style="padding-top:0">
+    <h2 class="section-title">Want to see more<span class="dot">?</span></h2>
+    <a class="btn primary" href="../index.html#work">View all work</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><i class="ti ti-x" aria-hidden="true"></i></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo"><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+  <p class="lb-count" id="lbCount"></p>
+</div>
+
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Sarah Husney</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/sarahhusney/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const gallery = document.getElementById('gallery');
+const photos = [];
+const pad = n => String(n).padStart(2, '0');
+
+function loadPhoto(i){
+  if (i > 60) return render();
+  const src = `../assets/images/photography/photo-${pad(i)}.jpg`;
+  const img = new Image();
+  img.onload = () => { photos.push(src); loadPhoto(i + 1); };
+  img.onerror = render;
+  img.src = src;
+}
+
+function render(){
+  if (!photos.length) { gallery.innerHTML = '<p class="empty">Photos coming soon.</p>'; return; }
+  gallery.innerHTML = photos.map((src, i) =>
+    `<button data-i="${i}" aria-label="Open photo ${i + 1}"><img src="${src}" alt="Photograph by Sarah Husney, ${i + 1} of ${photos.length}" loading="lazy"></button>`
+  ).join('');
+  gallery.querySelectorAll('button').forEach(b => b.addEventListener('click', () => openPhoto(+b.dataset.i)));
+}
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCount = document.getElementById('lbCount');
+let current = 0;
+
+function openPhoto(i){
+  current = (i + photos.length) % photos.length;
+  lbImg.src = photos[current];
+  lbImg.alt = `Photograph by Sarah Husney, ${current + 1} of ${photos.length}`;
+  lbCount.textContent = `${current + 1} / ${photos.length}`;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePhoto(){
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lbClose').addEventListener('click', closePhoto);
+document.getElementById('lbPrev').addEventListener('click', () => openPhoto(current - 1));
+document.getElementById('lbNext').addEventListener('click', () => openPhoto(current + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closePhoto(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closePhoto();
+  if (e.key === 'ArrowLeft') openPhoto(current - 1);
+  if (e.key === 'ArrowRight') openPhoto(current + 1);
+});
+
+loadPhoto(1);
+</script>
+</body>
+</html>
