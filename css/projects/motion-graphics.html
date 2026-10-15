@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Motion graphics | Sarah Husney</title>
-<meta name="description" content="Motion graphics work by Sarah Husney: animated titles, graphics, and explainers for broadcast and digital.">
+<meta name="description" content="Motion graphics work by Sarah Husney: animated infographics, intros, maps, and explainers for broadcast and digital.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <link rel="stylesheet" href="../css/style.css">
 <style>
@@ -16,14 +16,14 @@
 .mg-item:hover .mg-thumb::after{background:rgba(7,5,26,.05)}
 .mg-play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:var(--purple);display:grid;place-items:center;font-size:26px;z-index:1;transition:transform .3s}
 .mg-item:hover .mg-play{transform:scale(1.1)}
-.mg-info{padding:18px 22px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.mg-info h3{font-size:18px}
-.mg-info span{font-size:13px;color:var(--muted)}
+.mg-info{padding:20px 22px 24px}
+.mg-info h3{font-size:18px;line-height:1.35;margin-top:12px}
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,3,18,.92);display:none;align-items:center;justify-content:center;padding:24px}
 .lightbox.open{display:flex}
 .lb-inner{width:100%;max-width:1100px}
 .lb-video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000}
 .lb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lb-title{margin-top:16px;font-size:18px;font-weight:600}
 .lb-close{position:absolute;top:20px;right:24px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:var(--panel);color:#fff;font-size:22px;cursor:pointer;display:grid;place-items:center}
 .lb-close:hover{border-color:var(--purple)}
 @media (max-width:640px){.mg-grid{grid-template-columns:1fr}}
@@ -57,23 +57,23 @@
     <a class="back-link" href="../index.html#work"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back to work</a>
     <p class="eyebrow">Motion graphics</p>
     <h1>Design that <span>moves.</span></h1>
-    <p class="lead">Animated titles, graphics, and explainers that make information clear and keep viewers watching, across broadcast, podcasts, and social.</p>
+    <p class="lead">Animated infographics, intros, and maps that turn legislation, data, and stories into visuals viewers understand at a glance, created for statewide broadcast and digital.</p>
     <div class="tags">
-      <span class="tag">Motion design</span><span class="tag">Animation</span>
-      <span class="tag">Titles and lower thirds</span><span class="tag">Broadcast</span><span class="tag">Social video</span>
+      <span class="tag">Motion design</span><span class="tag">Infographics</span>
+      <span class="tag">3D animation</span><span class="tag">Hand-drawn animation</span><span class="tag">Broadcast</span>
     </div>
   </header>
 
   <section style="padding-top:24px">
     <div class="mg-grid">
-      <button class="mg-item" data-id="PjdEsZm2vos"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 01</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="TcON7BFOhLg"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 02</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="JJZZm2a-TyI"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 03</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="qsPNJsRhdH4"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 04</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="dL1MMv4eGFM"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 05</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="wOeGqlEawlM"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 06</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="oYOEh03qz-Q"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 07</h3><span>Watch</span></div></button>
-      <button class="mg-item" data-id="dBj9PC24NCc"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><h3>Motion piece 08</h3><span>Watch</span></div></button>
+      <button class="mg-item" data-id="PjdEsZm2vos" data-title="History Speaks Intro"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Intro animation</span><h3>History Speaks Intro</h3></div></button>
+      <button class="mg-item" data-id="TcON7BFOhLg" data-title="Hurricane Relief Bill Infographic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Legislative explainer</span><h3>Hurricane Relief Bill Infographic</h3></div></button>
+      <button class="mg-item" data-id="JJZZm2a-TyI" data-title="3D Coral Reef Infographic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">3D infographic</span><h3>3D Coral Reef Infographic</h3></div></button>
+      <button class="mg-item" data-id="qsPNJsRhdH4" data-title="Veto List Infographic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Legislative explainer</span><h3>Veto List Infographic</h3></div></button>
+      <button class="mg-item" data-id="dL1MMv4eGFM" data-title="Explore Florida Hand-Drawn and Motion Graphics Animation"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Hand-drawn animation</span><h3>Explore Florida: Hand-Drawn and Motion Graphics Animation</h3></div></button>
+      <button class="mg-item" data-id="wOeGqlEawlM" data-title="Map Motion Graphic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Map animation</span><h3>Map Motion Graphic</h3></div></button>
+      <button class="mg-item" data-id="oYOEh03qz-Q" data-title="Florida Department of Law Enforcement Infographic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Data infographic</span><h3>Florida Department of Law Enforcement Infographic</h3></div></button>
+      <button class="mg-item" data-id="dBj9PC24NCc" data-title="Photo Animation Graphic"><div class="mg-thumb"><span class="mg-play"><i class="ti ti-player-play" aria-hidden="true"></i></span></div><div class="mg-info"><span class="pill">Photo animation</span><h3>Photo Animation Graphic</h3></div></button>
     </div>
   </section>
 
@@ -87,7 +87,7 @@
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
   <button class="lb-close" id="lbClose" aria-label="Close video"><i class="ti ti-x" aria-hidden="true"></i></button>
-  <div class="lb-inner"><div class="lb-video" id="lbVideo"></div></div>
+  <div class="lb-inner"><div class="lb-video" id="lbVideo"></div><p class="lb-title" id="lbTitle"></p></div>
 </div>
 
 <footer class="site">
@@ -100,18 +100,19 @@
 </footer>
 
 <script>
+const lb = document.getElementById('lightbox');
+const lbVideo = document.getElementById('lbVideo');
+const lbTitle = document.getElementById('lbTitle');
 document.querySelectorAll('.mg-item').forEach(item => {
   const id = item.dataset.id;
   item.querySelector('.mg-thumb').style.backgroundImage = `url('https://img.youtube.com/vi/${id}/hqdefault.jpg')`;
-  item.addEventListener('click', () => openVideo(id));
+  item.addEventListener('click', () => {
+    lbVideo.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="${item.dataset.title}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    lbTitle.textContent = item.dataset.title;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
 });
-const lb = document.getElementById('lightbox');
-const lbVideo = document.getElementById('lbVideo');
-function openVideo(id){
-  lbVideo.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="Motion graphics video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
 function closeVideo(){
   lb.classList.remove('open');
   lbVideo.innerHTML = '';
